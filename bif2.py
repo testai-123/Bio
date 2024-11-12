@@ -2,6 +2,7 @@ import numpy as np
 import pandas as pd
 from scipy.stats import ttest_ind
 from statsmodels.stats.multitest import multipletests
+from IPython.display import FileLink
 
 # Set random seed for reproducibility
 np.random.seed(42)
@@ -80,3 +81,4 @@ with open("RNA_SEQ_ANALYSIS.txt", "w") as report_file:
     report_file.write("\n".join(report_lines))
 
 print("Analysis report generated as 'RNA_SEQ_ANALYSIS.txt'.")
+display(FileLink(r'RNA_SEQ_ANALYSIS.txt'))
